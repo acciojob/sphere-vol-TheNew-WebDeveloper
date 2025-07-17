@@ -1,5 +1,6 @@
-function fun() {
-    let rad = document.getElementById("radius").value;
+function volume_sphere() {
+    //Write your code here
+	let rad = document.getElementById("radius").value;
     if(rad < 0) {
         document.getElementById("volume").value = NaN;
     }
@@ -8,6 +9,6 @@ function fun() {
         let fixed = parseFloat(vol.toFixed(4));
         document.getElementById("volume").value = fixed;
     }
-}
+} 
 
-document.getElementById("submit").addEventListener("click", fun);
+window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
